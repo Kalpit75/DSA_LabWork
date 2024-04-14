@@ -1,22 +1,19 @@
+#include <stdio.h>
 
-#include<stdio.h>
+int gcd(int n1, int n2) {
+    if (n2 != 0)
+        return gcd(n2, n1 % n2);
+    else
+        return n1;
+}
 
 
-int main(){
-    int n1,n2,i,gcd;
-    printf("enter two number to calculate gcd: ");
-    scanf("%d%d", &n1, &n2);
-
-    for ( i = 1; i <= n1 && i<= n2; i++)
-    {
-        if (n1%i == 0 && n2%i ==0)
-        {
-            gcd = i;
-        }
-        
-    }
-
-    printf("gcd of %d and %d is: %d", n1, n2, gcd); 
-
+int main() {
+    int n1, n2;
+    printf("Enter two positive integers:\n");
+    scanf("%d %d", &n1, &n2);
+    printf("G.C.D of %d and %d is %d.", n1, n2, gcd(n1, n2));
     return 0;
+    float sam = 10%14;
+    printf("%d", sam);
 }
