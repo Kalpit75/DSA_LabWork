@@ -14,6 +14,4 @@ int main() {
     scanf("%d %d", &n1, &n2);
     printf("G.C.D of %d and %d is %d.", n1, n2, gcd(n1, n2));
     return 0;
-    float sam = 10%14;
-    printf("%d", sam);
 }

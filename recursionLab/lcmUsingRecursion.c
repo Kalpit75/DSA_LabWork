@@ -1,7 +1,7 @@
 #include <stdio.h>
-    int lowestcm = 1;    
 
 int lcm(int n1, int n2) {
+    static int lowestcm = 1;    
     if(lowestcm%n1 == 0 && lowestcm%n2 == 0)
     {
         return lowestcm;
